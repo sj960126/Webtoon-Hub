@@ -14,7 +14,7 @@ https://toy-projects-api.herokuapp.com/webtoon/info?weeknum={WeekNum}&service={S
 </pre>
 SeviceNameForm : daum <br>
 WeekNum : 0~7 (7 = Finished Webtoon) <br><br>
-from <br>
+#### from
 <pre>
 <code>
 {
