@@ -3,5 +3,7 @@
 #### Author
 -------------
 __SongHyunsoo__
-- Github: sj960126 <br>
-#### Api
+Github: sj960126 <br>
+__Api__
+SeviceNameForm : daum <br>
+WeekNum : 0~7 (7 = Finished Webtoon) <br>
