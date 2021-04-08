@@ -6,7 +6,7 @@
 ## Api
 Reference : 👤 leehyeokjae <br>
 - Github : <https://github.com/HyeokjaeLee><br>
-###use
+### use
 <pre>
 <code>
 https://toy-projects-api.herokuapp.com/webtoon/info?weeknum={WeekNum}&service={ServiceName}
