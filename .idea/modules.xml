@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Webtoon-Hub.iml" filepath="$PROJECT_DIR$/.idea/modules/Webtoon-Hub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Webtoon.iml" filepath="$PROJECT_DIR$/.idea/modules/Webtoon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Webtoon.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Webtoon.app.iml" />
     </modules>
   </component>
 </project>
