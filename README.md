@@ -4,12 +4,13 @@
 **SongHyunsoo** <br>
 Github: sj960126 <br>
 ## Api
+Reference : leehyeokjae <br>
+- Github : [Google](https://google.com, "google link")<br>
 SeviceNameForm : daum <br>
 WeekNum : 0~7 (7 = Finished Webtoon) <br>
 <pre>
 <code>
 https://toy-projects-api.herokuapp.com/webtoon/info?weeknum={WeekNum}&service={ServiceName}
-}
 </code>
 </pre>
 from <br>
@@ -23,7 +24,6 @@ from <br>
   "service": "daum",
   "state": "완결",
   "weekday": 7
-}
 }
 </code>
 </pre>
