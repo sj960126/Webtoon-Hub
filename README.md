@@ -12,3 +12,18 @@ https://toy-projects-api.herokuapp.com/webtoon/info?weeknum={WeekNum}&service={S
 }
 </code>
 </pre>
+from <br>
+<pre>
+<code>
+{
+  "title": "0.0MHz",
+  "artist": "장작",
+  "url": "http://m.webtoon.daum.net/m/webtoon/view/mhz",
+  "img": "http://t1.daumcdn.net/webtoon/op/5496570b740722974c771c3aac3d5a9fb333c0c8",
+  "service": "daum",
+  "state": "완결",
+  "weekday": 7
+}
+}
+</code>
+</pre>
