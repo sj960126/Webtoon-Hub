@@ -5,15 +5,15 @@
 - Github: <https://github.com/HyeokjaeLee><br>
 ## Api
 Reference : 👤 leehyeokjae <br>
-- Github : <https://github.com/HyeokjaeLee><br><br><br>
-
+- Github : <https://github.com/HyeokjaeLee><br>
+###use
 <pre>
 <code>
 https://toy-projects-api.herokuapp.com/webtoon/info?weeknum={WeekNum}&service={ServiceName}
 </code>
 </pre>
 SeviceNameForm : daum <br>
-WeekNum : 0~7 (7 = Finished Webtoon) <br>
+WeekNum : 0~7 (7 = Finished Webtoon) <br><br>
 from <br>
 <pre>
 <code>
