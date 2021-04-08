@@ -1,12 +1,12 @@
 ![header](https://capsule-render.vercel.app/api?type=slice&color=gradient&text=%20Webtoon-Hub%20%20&height=200&fontSize=100)
 <br>
 ## Author
-**👤 SongHyunsoo** <br>
+#### 👤 SongHyunsoo <br>
 - Github: <https://github.com/HyeokjaeLee><br>
 ## Api
 Reference : 👤 leehyeokjae <br>
 - Github : <https://github.com/HyeokjaeLee><br>
-### use
+#### Use
 <pre>
 <code>
 https://toy-projects-api.herokuapp.com/webtoon/info?weeknum={WeekNum}&service={ServiceName}
