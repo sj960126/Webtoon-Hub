@@ -2,10 +2,10 @@
 <br>
 ## Author
 **SongHyunsoo** <br>
-Github: sj960126 <br>
+- Github: <https://github.com/HyeokjaeLee> - <br>
 ## Api
 Reference : leehyeokjae <br>
-- Github : <https://github.com/HyeokjaeLee><br>
+- Github : <https://github.com/HyeokjaeLee> - <br>
 SeviceNameForm : daum <br>
 WeekNum : 0~7 (7 = Finished Webtoon) <br>
 <pre>
