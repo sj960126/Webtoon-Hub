@@ -5,7 +5,7 @@
 Github: sj960126 <br>
 ## Api
 Reference : leehyeokjae <br>
-- Github : [Google](https://google.com, "google link")<br>
+- Github : <https://github.com/HyeokjaeLee><br>
 SeviceNameForm : daum <br>
 WeekNum : 0~7 (7 = Finished Webtoon) <br>
 <pre>
