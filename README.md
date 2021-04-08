@@ -2,5 +2,6 @@
 <br>
 ### Author
 -------------
-SongHyunsoo
-<ol><li>Github: @sj960126</li></ol>
+__SongHyunsoo__
+- Github: sj960126 <br>
+
