@@ -1,11 +1,11 @@
 ![header](https://capsule-render.vercel.app/api?type=slice&color=gradient&text=%20Webtoon-Hub%20%20&height=200&fontSize=100)
 <br>
 ## Author
-**SongHyunsoo** <br>
-- Github: <https://github.com/HyeokjaeLee> - <br>
+**👤 SongHyunsoo** <br>
+- Github: <https://github.com/HyeokjaeLee><br>
 ## Api
-Reference : leehyeokjae <br>
-- Github : <https://github.com/HyeokjaeLee> - <br>
+Reference : 👤 leehyeokjae <br>
+- Github : <https://github.com/HyeokjaeLee><br><br><br>
 SeviceNameForm : daum <br>
 WeekNum : 0~7 (7 = Finished Webtoon) <br>
 <pre>
