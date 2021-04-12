@@ -26,5 +26,6 @@ https://toy-projects-api.herokuapp.com/webtoon/info?weeknum={WeekNum}&service={S
   "state": "완결",
   "weekday": 7
 }
+
 </code>
 </pre>
