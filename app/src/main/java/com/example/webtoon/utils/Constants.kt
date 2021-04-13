@@ -18,3 +18,12 @@ enum class DAY {
     SAT,
     END,
 }
+enum class RESPONSE_STATE {
+    OKAY,
+    FAIL
+}
+object API {
+    const val BASE_URL : String = "https://toy-projects-api.herokuapp.com"
+    const val WebToon_URL : String = "/webtoon/info"
+    const val WebToon_naver : String = "naver"
+}
