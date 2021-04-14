@@ -67,7 +67,6 @@ object RetrofitClient {
                 val finalRequest = originalRequest.newBuilder().url(addeUrl).method(originalRequest.method,originalRequest.body).build()
                 return chain.proceed(finalRequest)
             }
-
         })
 
         client.addInterceptor(baseParameterInterceptor)
