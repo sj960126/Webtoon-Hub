@@ -4,7 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.activity.viewModels
+import androidx.lifecycle.LiveData
 import com.example.webtoon.Adapter.PagerFragmentStateAdapter
+import com.example.webtoon.Model.WebToonModel
+import com.example.webtoon.ViewModel.WebViewModel
 import com.example.webtoon.databinding.ActivityMainBinding
 import com.example.webtoon.retorfit.RetrofitManager
 import com.example.webtoon.utils.RESPONSE_STATE
@@ -15,11 +19,25 @@ import com.google.android.material.tabs.TabLayout
 class MainActivity :AppCompatActivity(), TabLayout.OnTabSelectedListener{
     private val tabTextList = arrayListOf("일","월","화","수","목","금","토","완")
     private lateinit var binding: ActivityMainBinding
+    private var webToonList: ArrayList<WebToonModel>? = null
+    val model : WebViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         init()
+    }
+
+    override fun onResume() {
+        super.onResume()
+    }
+
+    private fun submit() {
+        val bundle = Bundle()
+        val fragment = WebToonCollection()
+        bundle.putSerializable("webToonList",webToonList)
+        fragment.arguments = bundle
     }
 
     private fun init() {
@@ -29,6 +47,7 @@ class MainActivity :AppCompatActivity(), TabLayout.OnTabSelectedListener{
             tab.text = tabTextList[position]
         }.attach()
         binding.tabLayout.addOnTabSelectedListener(this)
+
     }
 
     fun apicall(postion: String) {
@@ -36,9 +55,14 @@ class MainActivity :AppCompatActivity(), TabLayout.OnTabSelectedListener{
         //to do naver 부분 토글 스위치
         RetrofitManager.instance.searchWebtoon(searchTerm = postion, completion = {
             responseState, responsArrayList ->
-            when(responseState){
+            when(responseState){//        val transaction = supportFragmentManager.beginTransaction()
+
                 RESPONSE_STATE.OKAY -> {
                     Log.d(TAG,"호출 성공 ${responsArrayList?.size}")
+
+                    if (responsArrayList != null) {
+                        webToonList = responsArrayList
+                    }
                 }
                 RESPONSE_STATE.FAIL -> {
                     Toast.makeText(this,"서버 에러",Toast.LENGTH_SHORT).show()
@@ -49,11 +73,10 @@ class MainActivity :AppCompatActivity(), TabLayout.OnTabSelectedListener{
 
     override fun onTabSelected(tab: TabLayout.Tab?) {
         apicall(tab?.position.toString())
-
+        submit()
     }
     override fun onTabUnselected(tab: TabLayout.Tab?) {
     }
-
     override fun onTabReselected(tab: TabLayout.Tab?) {
     }
 }

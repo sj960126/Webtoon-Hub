@@ -13,16 +13,12 @@ import com.example.webtoon.ViewModel.WebViewModel
 import com.example.webtoon.databinding.FragmentWebttonBinding
 
 class WebToonCollection: Fragment() {
-    private var arrayList: ArrayList<WebToonModel>? = null
+    private var webToonList: ArrayList<WebToonModel>? = null
     private lateinit var binding: FragmentWebttonBinding
-    private val model: WebViewModel by activityViewModels<WebViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            arrayList = it.getSerializable("arrayList") as ArrayList<WebToonModel>?
-        }
-        Log.d("api확인", "프레그먼트 확인${arrayList?.size.toString()}")
+
     }
 
     // binding
@@ -40,4 +36,11 @@ class WebToonCollection: Fragment() {
         super.onViewCreated(view, savedInstanceState)
     }
 
-} 
+    override fun onResume() {
+        super.onResume()
+        arguments?.let {
+            webToonList = it.getSerializable("webToonList") as ArrayList<WebToonModel>?
+        }
+        Log.d("api확인", "프레그먼트 확인${webToonList?.size.toString()}")
+    }
+}
