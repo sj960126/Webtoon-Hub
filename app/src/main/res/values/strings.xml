@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Webtoon</string>
     <string name="title">Webtoon Hub</string>
+    <string name="webtoon_title">제목</string>
+    <string name="webtton_artist">아티스트</string>
 
 </resources>

@@ -12,6 +12,7 @@ class WebViewModel : ViewModel() {
     val data: MutableLiveData<ArrayList<WebToonModel>> by lazy {
         MutableLiveData<ArrayList<WebToonModel>>()
     }
+
     fun getData(): LiveData<ArrayList<WebToonModel>> {
         return data
     }

@@ -27,17 +27,13 @@ class MainActivity :AppCompatActivity(), TabLayout.OnTabSelectedListener{
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         init()
+        apicall("0")
+        model.data.value = webToonList
+
     }
 
     override fun onResume() {
         super.onResume()
-    }
-
-    private fun submit() {
-        val bundle = Bundle()
-        val fragment = WebToonCollection()
-        bundle.putSerializable("webToonList",webToonList)
-        fragment.arguments = bundle
     }
 
     private fun init() {
@@ -47,7 +43,6 @@ class MainActivity :AppCompatActivity(), TabLayout.OnTabSelectedListener{
             tab.text = tabTextList[position]
         }.attach()
         binding.tabLayout.addOnTabSelectedListener(this)
-
     }
 
     fun apicall(postion: String) {
@@ -73,7 +68,7 @@ class MainActivity :AppCompatActivity(), TabLayout.OnTabSelectedListener{
 
     override fun onTabSelected(tab: TabLayout.Tab?) {
         apicall(tab?.position.toString())
-        submit()
+        model.data.value = webToonList
     }
     override fun onTabUnselected(tab: TabLayout.Tab?) {
     }
