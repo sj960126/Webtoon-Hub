@@ -1,7 +1,9 @@
 package com.example.webtoon.recyclerview
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.drawable.Drawable
+import android.net.Uri
 import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
@@ -20,26 +22,29 @@ import com.squareup.picasso.Picasso
 class WebtoonitemViewHolder(val binding : WebtoonItemBinding):
                                          RecyclerView.ViewHolder(binding.root),
                                          View.OnClickListener {
-
-    private val WebtoonPhoto = binding.ivImg
-    private val WebtoonTitle = binding.tvTitle
-    private val WebtoonArticle = binding.tvArticle
+    private var webtoonUri:String  = ""
+    private val webtoonPhoto = binding.ivImg
+    private val webtoonTitle = binding.tvTitle
+    private val webtoonArticle = binding.tvArticle
 
     init {
-        WebtoonPhoto.setOnClickListener(this)
+        webtoonPhoto.setOnClickListener(this)
     }
 
     fun bindWithView(model: WebToonModel) {
-        WebtoonTitle.text = model.title
-        WebtoonArticle.text = model.artist
+        webtoonTitle.text = model.title
+        webtoonArticle.text = model.artist
         Log.d("이미지확인",model.img.toString())
-        Picasso.get().load(model.img).into(WebtoonPhoto)
+        Picasso.get().load(model.img).into(webtoonPhoto)
+        webtoonUri = model.url.toString()
     }
 
     override fun onClick(v: View?) {
         when(v) {
-            WebtoonPhoto -> {
+            webtoonPhoto -> {
                 Log.d("로그","이미지 클릭")
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(webtoonUri))
+                v.context.startActivities(arrayOf(intent))
             }
         }
     }
