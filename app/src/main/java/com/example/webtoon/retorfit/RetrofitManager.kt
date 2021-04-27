@@ -34,7 +34,7 @@ class RetrofitManager {
                 Log.d(TAG,"응답성공${response.raw()}")
 
                 when(response.code()) { //응답 코드
-                    200 -> { //성공 코
+                    200 -> { //성공 코드
                         response.body()?.let {
                             var parsedDataArray = ArrayList<WebToonModel>() // 데이터 전체를 리스트
                             val body = it.asJsonArray

@@ -22,7 +22,7 @@ import com.squareup.picasso.Picasso
 class WebtoonitemViewHolder(val binding : WebtoonItemBinding):
                                          RecyclerView.ViewHolder(binding.root),
                                          View.OnClickListener {
-    private var webtoonUri:String  = ""
+    private var webtoonUri: String  = ""
     private val webtoonPhoto = binding.ivImg
     private val webtoonTitle = binding.tvTitle
     private val webtoonArticle = binding.tvArticle

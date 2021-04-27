@@ -27,11 +27,7 @@ class MainActivity :AppCompatActivity(), TabLayout.OnTabSelectedListener{
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         init()
-        apicall("0")
-        model.data.value = webToonList
-
     }
-
     override fun onResume() {
         super.onResume()
     }
@@ -45,30 +41,7 @@ class MainActivity :AppCompatActivity(), TabLayout.OnTabSelectedListener{
         binding.tabLayout.addOnTabSelectedListener(this)
     }
 
-    fun apicall(postion: String) {
-        // naver or daum
-        //to do naver 부분 토글 스위치
-        RetrofitManager.instance.searchWebtoon(searchTerm = postion, completion = {
-            responseState, responsArrayList ->
-            when(responseState){//        val transaction = supportFragmentManager.beginTransaction()
-
-                RESPONSE_STATE.OKAY -> {
-                    Log.d(TAG,"호출 성공 ${responsArrayList?.size}")
-
-                    if (responsArrayList != null) {
-                        webToonList = responsArrayList
-                    }
-                }
-                RESPONSE_STATE.FAIL -> {
-                    Toast.makeText(this,"서버 에러",Toast.LENGTH_SHORT).show()
-                }
-            }
-        })
-    }
-
     override fun onTabSelected(tab: TabLayout.Tab?) {
-        apicall(tab?.position.toString())
-        model.data.value = webToonList
     }
     override fun onTabUnselected(tab: TabLayout.Tab?) {
     }
