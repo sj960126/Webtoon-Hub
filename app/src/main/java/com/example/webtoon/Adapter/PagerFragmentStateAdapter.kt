@@ -21,14 +21,14 @@ class PagerFragmentStateAdapter(fragmentActivity: FragmentActivity,tabSize : Int
 
     override fun createFragment(position: Int): Fragment {
         return when(position) {
-            1 -> WebToonCollection("0")
-            2 -> WebToonCollection("1")
-            3 -> WebToonCollection("2")
-            4 -> WebToonCollection("3")
-            5 -> WebToonCollection("4")
-            6 -> WebToonCollection("5")
-            7 -> WebToonCollection("6")
-            else -> WebToonCollection("7")
+            1 -> WebToonCollection()
+            2 -> WebToonCollection()
+            3 -> WebToonCollection()
+            4 -> WebToonCollection()
+            5 -> WebToonCollection()
+            6 -> WebToonCollection()
+            7 -> WebToonCollection()
+            else -> WebToonCollection()
         }
     }
 }
