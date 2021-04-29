@@ -42,14 +42,15 @@ class WebToonCollection(): Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        this.webToonRecyclerViewAdapter = WebToonRecyclerViewAdapter()
-        model.getData().value?.let { webToonRecyclerViewAdapter.setList(it) }
-        binding.rcList.layoutManager = GridLayoutManager(context,2,GridLayoutManager.VERTICAL,false)
-        binding.rcList.adapter = this.webToonRecyclerViewAdapter
+
     }
 
     override fun onResume() {
         super.onResume()
+        this.webToonRecyclerViewAdapter = WebToonRecyclerViewAdapter()
+        model.getData().value?.let { webToonRecyclerViewAdapter.setList(it) }
+        binding.rcList.layoutManager = GridLayoutManager(context,2,GridLayoutManager.VERTICAL,false)
+        binding.rcList.adapter = this.webToonRecyclerViewAdapter
 //        Log.d("로그","프레그먼트 확인 ${model.getData().value?.size.toString()}")
     }
 
