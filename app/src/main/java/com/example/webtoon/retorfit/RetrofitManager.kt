@@ -15,7 +15,6 @@ class RetrofitManager {
         val instance = RetrofitManager()
     }
 
-    //http Call
     // 레트로핏 인터페이스 가져오기
     private val iRetrofit : IRetrofit? = RetrofitClient.getClient(API.BASE_URL)?.create(IRetrofit::class.java)
 

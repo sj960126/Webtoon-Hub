@@ -26,4 +26,5 @@ object API {
     const val BASE_URL : String = "https://toy-projects-api.herokuapp.com"
     const val WebToon_URL : String = "/webtoon/info"
     const val WebToon_naver : String = "naver"
+    const val WebToon_daum : String = "daum"
 }

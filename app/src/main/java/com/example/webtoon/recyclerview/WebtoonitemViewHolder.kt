@@ -35,7 +35,9 @@ class WebtoonitemViewHolder(val binding : WebtoonItemBinding):
         webtoonTitle.text = model.title
         webtoonArticle.text = model.artist
         Log.d("이미지확인",model.img.toString())
-        Picasso.get().load(model.img).into(webtoonPhoto)
+        Picasso.get().load(model.img).fit().into(webtoonPhoto)
+
+//        Glide.with(App.instance ).load(model.img).placeholder(R.drawable.ic_webloding).into(webtoonPhoto)
         webtoonUri = model.url.toString()
     }
 

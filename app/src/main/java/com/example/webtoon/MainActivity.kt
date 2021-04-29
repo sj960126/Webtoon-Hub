@@ -33,8 +33,8 @@ class MainActivity :AppCompatActivity(), TabLayout.OnTabSelectedListener{
         apicall("0")
         Handler().postDelayed({
             binding.lottieLoding.visibility = View.INVISIBLE
+            init()
         },2000)
-        init()
     }
     override fun onResume() {
         super.onResume()
