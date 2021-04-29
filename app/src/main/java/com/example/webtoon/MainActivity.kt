@@ -1,8 +1,11 @@
 package com.example.webtoon
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.LiveData
@@ -28,6 +31,9 @@ class MainActivity :AppCompatActivity(), TabLayout.OnTabSelectedListener{
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         apicall("0")
+        Handler().postDelayed({
+            binding.lottieLoding.visibility = View.INVISIBLE
+        },2000)
         init()
     }
     override fun onResume() {
