@@ -62,7 +62,6 @@ object RetrofitClient {
                 Log.d(TAG,"인터셉터 호출")
                 //오리지날 리퀘스트
                 val originalRequest = chain.request() // 베이스 추가 전
-
                 val addeUrl = originalRequest.url.newBuilder().addQueryParameter("service",API.WebToon_naver).build()
                 val finalRequest = originalRequest.newBuilder().url(addeUrl).method(originalRequest.method,originalRequest.body).build()
                 return chain.proceed(finalRequest)
